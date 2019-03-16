@@ -2,14 +2,14 @@
   <div>
   <h1>Home</h1>
     <BaseButton
-      label="Kliknij"
       :loading="loading"
-      @click="logClick()"
-    />
+      @click="logClick()">
+      Kliknij
+    </BaseButton>
     <BaseButton
-      @click="changeLoading()"
-      label="Zmień stan"
-    />
+      @click="changeLoading()">
+      Zmień stan
+    </BaseButton>
   </div>
 </template>
 

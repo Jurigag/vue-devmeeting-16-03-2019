@@ -6,7 +6,7 @@
       v-if="loading"
       :loading="loading || buttonDisabled" class="spinner"
     />
-    {{ label }}
+    <slot></slot>
   </button>
 </template>
 
@@ -19,10 +19,6 @@
       loading: {
         type: Boolean,
         default: false
-      },
-      label: {
-        type: String,
-        default: DEFAULT_TEXT
       },
       disabled: Boolean
     },
