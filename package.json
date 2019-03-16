@@ -5,9 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node %NODE_DEBUG_OPTION% server.js"
   },
   "dependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "scss": "^0.2.4",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
