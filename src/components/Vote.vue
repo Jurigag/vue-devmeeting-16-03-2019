@@ -1,14 +1,29 @@
 <template>
   <div>
-  <h1>Vote</h1>
-    <BaseInput
-      label="Test"
-      placeholder="Podaj coś"
-      v-model="textValue"
-      @input="logInput"
-    />
+    <h1>Vote</h1>
+    <form>
+      <BaseInput
+        label="Test"
+        placeholder="Podaj coś"
+        v-model="textValue"
+        @input="logInput"
+        name="test"
+        type="text"
+        validate="required|min:3"
+      /><br/>
+      <BaseInput
+        label="Liczba"
+        placeholder="Podaj coś"
+        v-model="numberValue"
+        @input="logInput"
+        name="number"
+        type="number"
+        validate="required|integer|min_value:5"
+      />
+    </form>
     <br/>
-    {{ textValue }}
+    {{ textValue }}<br/>
+    {{ numberValue }}
   </div>
 </template>
 
@@ -17,7 +32,8 @@
     name: "Vote",
     data() {
       return {
-        textValue: ''
+        textValue: '',
+        numberValue:''
       }
     },
     methods: {

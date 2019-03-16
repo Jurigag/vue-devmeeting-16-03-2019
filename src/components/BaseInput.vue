@@ -2,10 +2,16 @@
   <label>
     {{ label }}
     <input
+      :type="type"
       :value="value"
       :placeholder="placeholder"
+      :name="name"
+      v-validate="validate"
       @input="customInput"
     />
+    <span v-show="errors.has(name)" class="error">
+      {{ errors.first(name) }}
+    </span>
   </label>
 </template>
 
@@ -14,6 +20,10 @@
     name: "BaseInput",
     inheritAttrs: false,
     props: {
+      type: {
+        type: String,
+        default: 'text'
+      },
       value: {
         type: String,
         default: ''
@@ -25,6 +35,14 @@
       placeholder: {
         type: String,
         default: 'Type anything'
+      },
+      name: {
+        type: String,
+        required: true,
+      },
+      validate: {
+        type: String,
+        default: ''
       }
     },
     computed: {
