@@ -3,7 +3,7 @@
     {{ label }}
     <input
       :value="value"
-      :placheholder="placeholder"
+      :placeholder="placeholder"
       @input="customInput"
     />
   </label>
