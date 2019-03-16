@@ -23,7 +23,8 @@
       label: {
         type: String,
         default: DEFAULT_TEXT
-      }
+      },
+      disabled: Boolean
     },
     computed: {
       //5/ 7. To make sure that every listener works (e.g. @click, @focus),
