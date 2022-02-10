@@ -9,7 +9,7 @@
     "start": "node %NODE_DEBUG_OPTION% server.js"
   },
   "dependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "scss": "^0.2.4",
     "vee-validate": "^2.2.0",
